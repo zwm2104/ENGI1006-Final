@@ -17,11 +17,21 @@ def hello():
     #return "Hello World!"
     return render_template("index.html")
 
+##need to edit to add personal information, links to other pages
+
 #optional test
 @app.route("/1006")
 def ten_oh_six():
-    "<p>Test <b>1006</b> page</p>"
+    return render_template("1006.html")
     #server error
+    
+@app.route("/classes")
+def classes():
+    return render_template("classes.html")
+
+@app.route("/assignments")
+def assignments():
+    return render_template("assignments.html")
 
 
 #start the server
