@@ -20,28 +20,32 @@ app = Flask(__name__)
 def hello():
     """Function runs html for home page, which includes personal information
     and links to other pages"""
-    #return "Hello World!"
+    
+    #return homepage template
     return render_template("index.html")
-##need to edit to add personal information, links to other pages
-    #fix image, need to rotate and resize
-    #still need doctstrings
 
 #define routes
 @app.route("/1006")
 def ten_oh_six():
     """Function runs html for test 1006 page"""
+    
+    #return 1006 page template
     return render_template("1006.html")
     
 @app.route("/classes")
 def classes():
     """Function runs html for classes page, which includes information
     about my classes this semester and my favorite class"""
+    
+    #return classes page template
     return render_template("classes.html")
 
 @app.route("/assignments")
 def assignments():
     """Function runs html for assignments page, which includes information about
     our assignements in ENGI1006 and my favorite assignment"""
+    
+    #return assignments page template
     return render_template("assignments.html")
 
 
@@ -49,5 +53,3 @@ def assignments():
 if __name__ == "__main__":
     app.run()
     
-#NOTES
-    #20:00 to link to other sections of website
