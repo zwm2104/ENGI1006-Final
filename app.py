@@ -11,6 +11,7 @@
 
 #import statements
 from flask import Flask, render_template
+import web_scrape as ws
 
 #Flask app variable
 app = Flask(__name__)
@@ -48,6 +49,12 @@ def assignments():
     #return assignments page template
     return render_template("assignments.html")
 
+@app.route("/links")
+def links_page():
+    """Function prints list of urls scraped from website using web_scrape function"""
+    
+    #return list of urls
+    return "<!DOCTYPE html><html><head><!--specifies title of the page !--><title>Links</title><head><body>{}</body></html>".format(ws.link_scrape("https://366weirdmovies.com"))
 
 #start the server
 if __name__ == "__main__":
