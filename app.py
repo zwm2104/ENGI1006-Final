@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 21 14:57:17 2020
-
-@author: etill
-"""
+###############################################################
+# Name: Zoë Webb-Mack
+# UNI: zwm2104
+# ENGI-1006 Final
+#
+# File creates html website on local server using Flask.
+# Functions contained here create different site pages,
+# referencing template html files in folder.
+###############################################################
 
 #import statements
 from flask import Flask, render_template
